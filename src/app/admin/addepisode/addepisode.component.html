@@ -1,0 +1,52 @@
+<form [formGroup]="fg" *ngFor="let fg of episodeform.controls" (submit)="submit(fg)">
+  <table class="table table-light">
+    <thead class="thead-light">
+      <tr>
+
+
+        <th>IsActive</th>
+        <th>tvshowname</th>
+        <th>url</th>
+        <th>Episode Num</th>
+        <th>Action</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+
+
+
+
+        <td>
+          <input type="checkbox" formControlName="isActive" name="isActive" [value]="false" class=" form-control">
+        </td>
+
+        <td>
+          <select  formControlName="tvshowname" name="tvshowname" class=" form-control">
+            <option value="">--select</option>
+            <option *ngFor="let i of tvshowlist" value="{{i.name}}">{{i.name}}</option>
+          </select>
+        </td>
+
+        <td>
+          <input formControlName="url" name="url" class=" form-control">
+        </td>
+        <td>
+          <input type="file" accept="image/*"  formControlName="img" class=" form-control" (change)="handlefiles($event)">
+          <img id="me" src="assets/r.png" alt="" style="width: 150px; height: 125px;">
+
+        </td>
+        <td>
+          <input formControlName="episode" name="episode" class=" form-control">
+        </td>
+
+        <td >
+          <input type="submit" value="Add" class=" btn btn-success">
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+
+</form>

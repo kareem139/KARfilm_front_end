@@ -1,0 +1,74 @@
+
+
+<div class="row" >
+
+
+
+        <div class="col-md-2  model-card" *ngFor="let item of movservice.movieswithcat" >
+
+
+
+              <a href="#">
+                  <div class="ribbon"><span>جديد</span></div>
+              </a>
+              <div class="bsblox-image-effect16">
+                <a  [href]='item.url'>
+                  <img class="img-fluid" [src]='item.imgpath' style="width: 150; height: 200px;" />
+                  <div class="bsblox-caption">
+                    <p ><strong style="color: darkgreen; font-size: 20px;" class=" btn btn-outline-dark"><i class="fa fa-play-circle fa fa-search"></i></strong></p>
+                  </div>
+                </a>
+
+                  <div class="text-center model-card-title">{{item.name}}</div>
+              </div>
+
+        </div>
+
+
+
+
+
+
+      <div class="col-md-2  model-card" *ngFor="let item of episservice.episodeswithpredict">
+
+        <a href="#">
+            <div class="ribbon"><span>episode({{item.episode}})</span></div>
+        </a>
+        <div class="bsblox-image-effect16">
+          <a  [href]='item.url'>
+            <img class="img-fluid" [src]='item.imgpath' style="width: 150; height: 200px;" />
+            <div class="bsblox-caption">
+              <p ><strong style="color: darkgreen; font-size: 20px;" class=" btn btn-outline-dark"><i class="fa fa-play-circle fa fa-search"></i></strong></p>
+            </div>
+          </a>
+
+            <div class="text-center model-card-title">{{item.tvshowname}}</div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+      <div class="col-md-2  model-card" *ngFor="let item of tvservice.tvshowswithcat">
+
+        <a href="#">
+            <div class="ribbon"><span>جديد</span></div>
+        </a>
+        <div class="bsblox-image-effect16">
+          <a  (click)="getepisodeswithname(item.name)" >
+            <img class="img-fluid" [src]='item.imgpath' style="width: 150; height: 200px;" />
+            <div class="bsblox-caption">
+              <p ><strong style="color: darkgreen; font-size: 20px;" class=" btn btn-outline-dark"><i class="fa fa-play-circle fa fa-search"></i></strong></p>
+            </div>
+          </a>
+
+            <div class="text-center model-card-title">{{item.name}}</div>
+        </div>
+      </div>
+
+
+
+</div>

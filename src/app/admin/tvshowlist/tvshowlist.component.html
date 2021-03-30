@@ -1,0 +1,29 @@
+<a routerLink="/admin/addtvshow" class=" btn btn-outline-secondary">Add New</a>
+<table class="table table-light">
+  <thead class="thead-light">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>IsActive</th>
+      <th>Category</th>
+      <th>Img</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of service.tvshows">
+      <td>{{item.id}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.isActive}}</td>
+      <td>{{item.categoryname}}</td>
+      <td>
+        <img [src]='item.imgpath' alt="" style="height: 100px; width: 100px;">
+      </td>
+      <td>
+        <a class="btn btn-danger" (click)="deletetv(item.id)">Remove</a>
+      </td>
+
+    </tr>
+  </tbody>
+
+</table>

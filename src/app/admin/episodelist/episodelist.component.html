@@ -1,0 +1,33 @@
+<a routerLink="/admin/addepisode" class=" btn btn-outline-secondary">Add New</a>
+<table class="table table-bordered  table-hover">
+  <thead class="thead-light">
+    <tr>
+      <th>Id</th>
+
+      <th>IsActive</th>
+      <th>Tv_ShowName</th>
+      <th>Episode_Num</th>
+      <th>Img</th>
+      <th>Url</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of service.episodes">
+      <td>{{item.id}}</td>
+
+      <td>{{item.isActive}}</td>
+      <td>{{item.tvshowname}}</td>
+      <td>{{item.episode}}</td>
+      <td><img [src]='item.imgpath' alt="kkk" style="height: 100px; width: 125px;"></td>
+      <td>{{item.url}}</td>
+
+      <td>
+        <a class="btn btn-danger" (click)="deleteepis(item.id)">Remove</a>
+      </td>
+
+    </tr>
+  </tbody>
+
+</table>
+

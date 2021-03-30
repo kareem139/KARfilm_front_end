@@ -1,0 +1,129 @@
+
+<div class=" row">
+
+
+                <!--الافلام-->
+                 <!--الافلام-->
+                  <!--الافلام-->
+                   <!--الافلام-->
+          <div class="col-12 mr-0 ml-0 mb-5 p-0">
+            <div>
+              <span>احدث الافلام</span>
+              <a routerLink="/home/movlist"><i class="bi-chevron-double-left"></i>المزيد</a>
+            </div>
+            <div class="swiper-container ">
+              <div class="swiper-wrapper" ><!--A comprobation that really doesn't matter here-->
+                  <div *ngFor="let item of movservice.movies" class="swiper-slide col-md-2 col-sm-12  model-card">
+
+
+                    <a href="#">
+                      <div class="ribbon"><span>جديد</span></div>
+                  </a>
+                  <div class="bsblox-image-effect16">
+                    <a  [href]='item.url'>
+                      <img class="img-fluid" [src]='item.imgpath' style="width: 150; height: 200px;" />
+                      <div class="bsblox-caption">
+                        <p ><strong style="color: darkgreen; font-size: 20px;" class=" btn btn-outline-dark"><i class="fa fa-play-circle fa fa-search"></i></strong></p>
+                      </div>
+                    </a>
+
+                      <div class="text-center model-card-title">{{item.name}}</div>
+                  </div>
+
+
+
+                  </div>
+              </div>
+              <!-- Add Pagination -->
+
+              <!-- Add Arrows -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+
+
+          <!--المسلسلات-->
+             <!--المسلسلات-->
+              <!--المسلسلات-->
+               <!--المسلسلات-->
+
+               <div class="col-12 mr-0 ml-0 mb-5 p-0">
+                <div>
+                  <span>احدث المسلسلات</span>
+                  <a routerLink="/home/movlist"><i class="bi-chevron-double-left"></i>المزيد</a>
+                 </div>
+                <div class="swiper-container ">
+                  <div class="swiper-wrapper" >
+
+
+                          <div class="swiper-slide col-md-2  model-card" *ngFor="let item of tvservice.tvshows">
+                            <a href="#">
+                                <div class="ribbon"><span>جديد</span></div>
+                            </a>
+                            <div class="bsblox-image-effect16">
+                              <a  (click)="getepisodeswithname(item.name)" >
+                                <img class="img-fluid" [src]='item.imgpath' style="width: 150; height: 200px;" />
+                                <div class="bsblox-caption">
+                                  <p ><strong style="color: darkgreen; font-size: 20px;" class=" btn btn-outline-dark"><i class="fa fa-play-circle fa fa-search"></i></strong></p>
+                                </div>
+                              </a>
+
+                                <div class="text-center model-card-title">{{item.name}}</div>
+                            </div>
+                          </div>
+
+                        </div>
+                        <!-- Add Pagination -->
+
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                      </div>
+                      </div>
+
+
+                      <!--الحلقات-->
+                      <!--الحلقات-->
+                      <!--الحلقات-->
+                      <!--الحلقات-->
+
+   <div class="col-12 mr-0 ml-0 mb-5 p-0">
+      <div>
+        <span>احدث الحلقات</span>
+        <a routerLink="/home/movlist"><i class="bi-chevron-double-left"></i>المزيد</a>
+       </div>
+      <div class="swiper-container ">
+        <div class="swiper-wrapper" >
+              <div class="swiper-slide col-md-2  model-card" *ngFor="let item of episservice.episodes">
+                <a href="#">
+                    <div class="ribbon"><span>episode({{item.episode}})</span></div>
+                </a>
+                <div class="bsblox-image-effect16">
+                  <a  [href]='item.url'>
+                    <img class="img-fluid" [src]='item.imgpath' style="width: 150; height: 200px;" />
+                    <div class="bsblox-caption">
+                      <p ><strong style="color: darkgreen; font-size: 20px;" class=" btn btn-outline-dark"><i class="fa fa-play-circle fa fa-search"></i></strong></p>
+                    </div>
+                  </a>
+
+                    <div class="text-center model-card-title">{{item.tvshowname}}</div>
+                </div>
+              </div>
+
+            </div>
+            <!-- Add Pagination -->
+
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          </div>
+
+
+    <router-outlet></router-outlet>
+
+</div>
+
+
+

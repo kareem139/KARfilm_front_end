@@ -1,0 +1,42 @@
+<form [formGroup]="fg" *ngFor="let fg of tvshowForm.controls" (submit)="submit(fg)">
+  <table class="table table-light">
+    <thead class="thead-light">
+      <tr>
+        <th>Name</th>
+        <th>Img</th>
+        <th>IsActive</th>
+        <th>Category</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+            <input  formControlName="name" name="name" class=" form-control">
+        </td>
+
+        <td>
+          <input type="file" formControlName="img" name="img" (change)="handlefile($event)" class=" form-control">
+          <img id="img" src="assets/anonymous.jfif" style="height: 100px; width: 100px;">
+       </td>
+
+        <td>
+          <input type="checkbox" formControlName="isActive" name="isActive" [value]="false" class=" form-control">
+        </td>
+
+        <td>
+          <select  formControlName="categoryname" name="categoryname" class=" form-control">
+            <option value="">--select</option>
+            <option *ngFor="let i of catlist" value="{{i.name}}">{{i.name}}</option>
+          </select>
+        </td>
+
+        <td >
+          <input type="submit" value="Add" class=" btn btn-success">
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+
+</form>

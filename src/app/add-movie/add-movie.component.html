@@ -1,0 +1,33 @@
+<form ngForm="form" (submit)="submit()" >
+    <div class="form-group">
+        <label for="movie_Name">movie_Name</label>
+        <input type="text" [(ngModel)]="service.movie.movie_Name" name="movie_Name" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="movie_Link">movie_Link</label>
+      <input type="text" [(ngModel)]="service.movie.movie_Link" name="movie_Link" class="form-control">
+   </div>
+
+    <div class="form-group">
+    <label for="movie_Picture">movie_Picture</label>
+    <input type="file"  [(ngModel)]="service.movie.movie_Picture" name="movie_Picture" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="isActive">isActive</label>
+      <input type="checkbox"  [(ngModel)]="service.movie.isActive" name="isActive" class="form-control">
+    </div>
+
+
+    <div class="form-group">
+      <label for="category_Id">category_Id</label>
+      <input type="text"  [(ngModel)]="service.movie.category_Id" name="category_Id" class="form-control">
+    </div>
+
+
+
+
+    <input type="submit" class="btn btn-success" value="save movie">
+
+</form>

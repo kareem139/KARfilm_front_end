@@ -1,0 +1,36 @@
+<header id="km-header" class=" pl-0 ml-0" >
+  <nav class="navbar navbar-expand-lg p-0">
+      <div class="km-navbar-brand text-lg-center">
+          <div class="container">
+            <button class="navbar-toggler" data-target="#navbarTogglerDemo03" data-toggle="collapse" type="button">
+              <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="#">
+              <p><strong>KAR</strong> film</p>
+            </a>
+              <div class="km-navbar-brand-btn-container">
+
+              </div>
+      </div>
+      </div>
+      <div class="km-navbar-menu">
+          <div class="container">
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                  <ul class="navbar-nav m-auto">
+                      <li class="nav-item active"><a class="nav-link" routerLink="/home/movies">الرئيسيه</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">نبذه عنا</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">مواقعنا</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">راسلنا</a></li>
+                      <li class="nav-item"><a class="nav-link" routerLink="/admin/movies">Dashboard</a></li>
+
+                      <li class=" nav-item " style="padding-top: 20px;" >
+                        <input  class=" nav-item " type="text" id="search">
+                        <button  class=" nav-item " (click)="se()">بحث</button>
+                      </li>
+                      <i style="padding-top: 20px;"><a (click)="logout()" class="btn btn-warning">تسجيل الخروج</a></i>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </nav>
+</header>

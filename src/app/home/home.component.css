@@ -1,0 +1,16 @@
+ div > div.col-6.center.border-primary.mt-2
+{
+  max-height: 700px;
+  overflow: scroll;
+}
+
+.left
+{
+  height: 500px;
+}
+
+::-webkit-scrollbar
+{
+  width: 0px;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}

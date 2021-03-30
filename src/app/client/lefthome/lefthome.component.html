@@ -1,0 +1,22 @@
+
+
+<div class="swiper-container ">
+  <div class="swiper-wrapper" ><!--A comprobation that really doesn't matter here-->
+      <div *ngFor="let model of movies" class="swiper-slide">
+
+            <a data-href="{{model.url}}">
+
+              <img  data-src="{{model.imgpath}}"  style="width: 100%;"/>
+            </a>
+
+
+
+
+      </div>
+  </div>
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+  <!-- Add Arrows -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>

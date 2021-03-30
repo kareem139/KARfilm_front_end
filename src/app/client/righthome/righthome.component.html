@@ -1,0 +1,37 @@
+<div id="sidebar-main" class="sidebar sidebar-default sidebar-separate right-align">
+  <div class="sidebar-category sidebar-default">
+      <div class="category-title p-2">
+          <span>المفضله<i class="fa fa-star"></i></span>
+
+      </div>
+      <div class="category-content">
+          <ul id="fruits-nav" class="nav flex-column">
+              <li class="nav-item">
+                  <a (click)="showmovlist()" class="nav-link">
+                      <i class="fa fa-pencil" aria-hidden="true"></i> الافلام
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a (click)="showtvlist()" class="nav-link">
+                      <i class="fa fa-pencil" aria-hidden="true"></i> المسلسلات
+                  </a>
+              </li>
+
+              <li class="nav-item">
+                  <a href="#other-fruits" class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="other-fruits">
+                      <i class="fa fa-pencil" aria-hidden="true"></i> النوع
+                  </a>
+                  <ul id="other-fruits" class="flex-column collapse" *ngFor="let item of catlist">
+                      <li class="nav-item">
+                          <a (click)="getmoviewithcat(item.name)" class="nav-link">
+                              <i class="fa fa-pencil" aria-hidden="true"></i> {{item.name}}
+                          </a>
+                      </li>
+
+                  </ul>
+              </li>
+          </ul>
+      </div>
+  </div>
+</div>
+

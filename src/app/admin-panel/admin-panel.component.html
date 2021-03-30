@@ -1,0 +1,37 @@
+<div class="row ml-0 pl-0">
+ <div class="col-12">
+
+
+
+<div class="wrapper">
+  <div class="sidebar" data-color="purple" data-image style="background-image:url('https://vignette.wikia.nocookie.net/the-xmen-roleplay/images/c/c1/Forest-Lake-HD-Desktop-Wallpaper.jpg/revision/latest?cb=20130822192442');">
+      <div class="sidebar-wrapper">
+          <div class="logo"><a class="simple-text" href="#">Admin dashboard</a></div>
+          <ul class="list-group">
+              <li class="list-group-item" routerLink="/admin/movies"><span>Movie</span></li>
+              <li class="list-group-item" routerLink="/admin/categories"><span>Category </span></li>
+              <li class="list-group-item" routerLink="/admin/tvshows"><span>Tv-Shows </span></li>
+              <li class="list-group-item" routerLink="/admin/episodes"><span>Episodes&#39;s </span></li>
+          </ul>
+      </div>
+  </div>
+  <div class="main-panel">
+      <nav class="navbar navbar-light navbar-expand-md">
+          <div class="container-fluid">
+              <div><a class="navbar-brand" href="#">Control panel</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button></div>
+              <div
+                  class="collapse navbar-collapse" id="navcol-1">
+                  <ul class="nav navbar-nav"></ul>
+                  <ul class="nav navbar-nav ml-auto">
+                      <li class="nav-item" role="presentation"><a class="nav-link" routerLink="/home">Home<i class="bi-house "></i> </a></li>
+                  </ul>
+          </div>
+  </div>
+  </nav>
+  <div class="content col-10">
+      <router-outlet></router-outlet>
+  </div>
+</div>
+</div>
+</div>
+</div>
